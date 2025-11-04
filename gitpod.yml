@@ -1,0 +1,15 @@
+image: gitpod/workspace-flutter
+
+tasks:
+  - name: Setup Flutter & iOS Simulator
+    init: |
+      flutter doctor
+      sudo xcode-select --switch /Applications/Xcode.app
+    command: |
+      echo "Setup completed!"
+      flutter devices
+
+vscode:
+  extensions:
+    - dart-code.flutter
+    - dart-code.dart-code
